@@ -11,6 +11,17 @@ class Person(object):
 		self.first_name = first_name
 		self.last_name = last_name
 
+class Person1(object):
+	def first_name(self):
+		return 'xxxxx'
+		
+import os
+print os.path.dirname(__file__)
+
+t = Template('my name is {{ person.first_name }}.')
+p = Person1()
+print t.render(Context({'person':p}))
+
 d = datetime.date(2016,03,31)
 t = Template('the month is {{ date.month }} and the year is {{ date.year }}. ')
 c = Context({'date':d})
@@ -29,3 +40,14 @@ print t.render(c)
 t = Template('item 2 is {{ items.2 }}')
 c = Context({'items':['0','1','2']})
 print t.render(c)
+
+t = Template('In {{hours_offset}},it will be {{ next_time }}.')
+c = Context({'hours_offset':'2','next_time':'2016-03-31 17:00'})
+print t.render(c)
+# t = Template("""{% if 1 %} 
+# 					my name is {{ name }}.
+# 				{% enif %}
+# 	""")
+# c = Context({'name':'mayongfen'})
+
+# print t.render(c)
