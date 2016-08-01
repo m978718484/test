@@ -1,0 +1,688 @@
+     vth = vfb + phi + k1ox * sqrtphis   // level=1 vth=-1.#IND00e+000(in bsim5.valine 3799)
+     <
+          vfb = vfbcv   // level=2 vfb=-1.000000e+000(in bsim5.valine 3798)
+          <
+               vfbcv      = VFBCV   // level=3 vfbcv=-1.000000e+000(in bsim5.valine 1192)
+          />
+          phi     = vtm0 * ln(ndep / ni) + phin + 0.4   // level=2 phi=8.072712e-001(in bsim5.valine 2203)
+          <
+               ndep   = 1.0e17   // level=3 ndep=1.000000e+017(in bsim5.valine 2184)
+               ni   = 1.45e10 * (tnom / 300.15) * sqrt(tnom / 300.15) * exp(21.5565981 - eg0 / (2.0 * vtm0))   // level=3 ni=1.450000e+010(in bsim5.valine 1802)
+               <
+                    tnom = TNOM + 273.15   // level=4 tnom=3.001500e+002(in bsim5.valine 1336)
+                    eg0  = 1.16 - 7.02e-4 * tnom * tnom / (tnom + 1108.0)   // level=4 eg0=1.115088e+000(in bsim5.valine 1801)
+                    <
+                         tnom = TNOM + 273.15   // level=5 tnom=3.001500e+002(in bsim5.valine 1336)
+                    />
+                    vtm0 = `KboQ * tnom   // level=4 vtm0=2.586419e-002(in bsim5.valine 1800)
+                    <
+                         tnom = TNOM + 273.15   // level=5 tnom=3.001500e+002(in bsim5.valine 1336)
+                    />
+               />
+               vtm0 = `KboQ * tnom   // level=3 vtm0=2.586419e-002(in bsim5.valine 1800)
+               <
+                    tnom = TNOM + 273.15   // level=4 tnom=3.001500e+002(in bsim5.valine 1336)
+               />
+               phin       = PHIN   // level=3 phin=0.000000e+000(in bsim5.valine 1132)
+          />
+          k1ox = k1 * toxe / toxm   // level=2 k1ox=-1.#IND00e+000(in bsim5.valine 2293)
+          <
+               k1 = gamma2 - 2.0 * k2 * sqrt(phi - vbm)   // level=3 k1=-1.#IND00e+000(in bsim5.valine 2259)
+               <
+                    phi     = vtm0 * ln(ndep / ni) + phin + 0.4   // level=4 phi=8.072712e-001(in bsim5.valine 2203)
+                    <
+                         ndep   = 1.0e17   // level=5 ndep=1.000000e+017(in bsim5.valine 2184)
+                         ni   = 1.45e10 * (tnom / 300.15) * sqrt(tnom / 300.15) * exp(21.5565981 - eg0 / (2.0 * vtm0))   // level=5 ni=1.450000e+010(in bsim5.valine 1802)
+                         <
+                              tnom = TNOM + 273.15   // level=6 tnom=3.001500e+002(in bsim5.valine 1336)
+                              eg0  = 1.16 - 7.02e-4 * tnom * tnom / (tnom + 1108.0)   // level=6 eg0=1.115088e+000(in bsim5.valine 1801)
+                              <
+                                   tnom = TNOM + 273.15   // level=7 tnom=3.001500e+002(in bsim5.valine 1336)
+                              />
+                              vtm0 = `KboQ * tnom   // level=6 vtm0=2.586419e-002(in bsim5.valine 1800)
+                              <
+                                   tnom = TNOM + 273.15   // level=7 tnom=3.001500e+002(in bsim5.valine 1336)
+                              />
+                         />
+                         vtm0 = `KboQ * tnom   // level=5 vtm0=2.586419e-002(in bsim5.valine 1800)
+                         <
+                              tnom = TNOM + 273.15   // level=6 tnom=3.001500e+002(in bsim5.valine 1336)
+                         />
+                         phin       = PHIN   // level=5 phin=0.000000e+000(in bsim5.valine 1132)
+                    />
+                    vbm = -vbm   // level=4 vbm=3.000000e+000(in bsim5.valine 2253)
+                    <
+                         vbm        = VBM   // level=5 vbm=-3.000000e+000(in bsim5.valine 1189)
+                    />
+                    gamma2   = 5.753e-12 * sqrt(nsub) / coxe   // level=4 gamma2=1.224273e-001(in bsim5.valine 2200)
+                    <
+                         nsub       = NSUB   // level=5 nsub=6.000000e+016(in bsim5.valine 1113)
+                         coxe = epsrox * `EPS0 / toxe   // level=5 coxe=1.151043e-002(in bsim5.valine 1773)
+                         <
+                              epsrox = 3.9   // level=6 epsrox=3.900000e+000(in bsim5.valine 1327)
+                              toxe = 3.0e-9   // level=6 toxe=3.000000e-009(in bsim5.valine 1304)
+                         />
+                    />
+                    k2 = t0 * t1 / (2.0 * t2 + vbm)   // level=4 k2=-1.#IND00e+000(in bsim5.valine 2258)
+                    <
+                         t0 = gamma1 - gamma2   // level=5 t0=3.562567e-002(in bsim5.valine 2255)
+                         <
+                              gamma1 = 5.753e-12 * sqrt(ndep) / coxe   // level=6 gamma1=1.580530e-001(in bsim5.valine 2185)
+                              <
+                                   ndep   = 1.0e17   // level=7 ndep=1.000000e+017(in bsim5.valine 2184)
+                                   coxe = epsrox * `EPS0 / toxe   // level=7 coxe=1.151043e-002(in bsim5.valine 1773)
+                                   <
+                                        epsrox = 3.9   // level=8 epsrox=3.900000e+000(in bsim5.valine 1327)
+                                        toxe = 3.0e-9   // level=8 toxe=3.000000e-009(in bsim5.valine 1304)
+                                   />
+                              />
+                              gamma2   = 5.753e-12 * sqrt(nsub) / coxe   // level=6 gamma2=1.224273e-001(in bsim5.valine 2200)
+                              <
+                                   nsub       = NSUB   // level=7 nsub=6.000000e+016(in bsim5.valine 1113)
+                                   coxe = epsrox * `EPS0 / toxe   // level=7 coxe=1.151043e-002(in bsim5.valine 1773)
+                                   <
+                                        epsrox = 3.9   // level=8 epsrox=3.900000e+000(in bsim5.valine 1327)
+                                        toxe = 3.0e-9   // level=8 toxe=3.000000e-009(in bsim5.valine 1304)
+                                   />
+                              />
+                         />
+                         t1 = sqrt(phi - vbx) - sqrtphi   // level=5 t1=-1.#IND00e+000(in bsim5.valine 2256)
+                         <
+                              phi     = vtm0 * ln(ndep / ni) + phin + 0.4   // level=6 phi=8.072712e-001(in bsim5.valine 2203)
+                              <
+                                   ndep   = 1.0e17   // level=7 ndep=1.000000e+017(in bsim5.valine 2184)
+                                   ni   = 1.45e10 * (tnom / 300.15) * sqrt(tnom / 300.15) * exp(21.5565981 - eg0 / (2.0 * vtm0))   // level=7 ni=1.450000e+010(in bsim5.valine 1802)
+                                   <
+                                        tnom = TNOM + 273.15   // level=8 tnom=3.001500e+002(in bsim5.valine 1336)
+                                        eg0  = 1.16 - 7.02e-4 * tnom * tnom / (tnom + 1108.0)   // level=8 eg0=1.115088e+000(in bsim5.valine 1801)
+                                        <
+                                             tnom = TNOM + 273.15   // level=9 tnom=3.001500e+002(in bsim5.valine 1336)
+                                        />
+                                        vtm0 = `KboQ * tnom   // level=8 vtm0=2.586419e-002(in bsim5.valine 1800)
+                                        <
+                                             tnom = TNOM + 273.15   // level=9 tnom=3.001500e+002(in bsim5.valine 1336)
+                                        />
+                                   />
+                                   vtm0 = `KboQ * tnom   // level=7 vtm0=2.586419e-002(in bsim5.valine 1800)
+                                   <
+                                        tnom = TNOM + 273.15   // level=8 tnom=3.001500e+002(in bsim5.valine 1336)
+                                   />
+                                   phin       = PHIN   // level=7 phin=0.000000e+000(in bsim5.valine 1132)
+                              />
+                              vbx = -vbx   // level=6 vbx=1.051014e+000(in bsim5.valine 2251)
+                              <
+                                   vbx = phi - 7.7348e-4 * ndep * xt * xt   // level=7 vbx=-1.051014e+000(in bsim5.valine 2249)
+                                   <
+                                        phi     = vtm0 * ln(ndep / ni) + phin + 0.4   // level=8 phi=8.072712e-001(in bsim5.valine 2203)
+                                        <
+                                             ndep   = 1.0e17   // level=9 ndep=1.000000e+017(in bsim5.valine 2184)
+                                             ni   = 1.45e10 * (tnom / 300.15) * sqrt(tnom / 300.15) * exp(21.5565981 - eg0 / (2.0 * vtm0))   // level=9 ni=1.450000e+010(in bsim5.valine 1802)
+                                             <
+                                                  tnom = TNOM + 273.15   // level=10 tnom=3.001500e+002(in bsim5.valine 1336)
+                                                  eg0  = 1.16 - 7.02e-4 * tnom * tnom / (tnom + 1108.0)   // level=10 eg0=1.115088e+000(in bsim5.valine 1801)
+                                                  <
+                                                       tnom = TNOM + 273.15   // level=11 tnom=3.001500e+002(in bsim5.valine 1336)
+                                                  />
+                                                  vtm0 = `KboQ * tnom   // level=10 vtm0=2.586419e-002(in bsim5.valine 1800)
+                                                  <
+                                                       tnom = TNOM + 273.15   // level=11 tnom=3.001500e+002(in bsim5.valine 1336)
+                                                  />
+                                             />
+                                             vtm0 = `KboQ * tnom   // level=9 vtm0=2.586419e-002(in bsim5.valine 1800)
+                                             <
+                                                  tnom = TNOM + 273.15   // level=10 tnom=3.001500e+002(in bsim5.valine 1336)
+                                             />
+                                             phin       = PHIN   // level=9 phin=0.000000e+000(in bsim5.valine 1132)
+                                        />
+                                        ndep   = 1.0e17   // level=8 ndep=1.000000e+017(in bsim5.valine 2184)
+                                        xt         = XT   // level=8 xt=1.550000e-007(in bsim5.valine 1225)
+                                   />
+                              />
+                              sqrtphi = sqrt(phi)   // level=6 sqrtphi=8.984827e-001(in bsim5.valine 2204)
+                              <
+                                   phi     = vtm0 * ln(ndep / ni) + phin + 0.4   // level=7 phi=8.072712e-001(in bsim5.valine 2203)
+                                   <
+                                        ndep   = 1.0e17   // level=8 ndep=1.000000e+017(in bsim5.valine 2184)
+                                        ni   = 1.45e10 * (tnom / 300.15) * sqrt(tnom / 300.15) * exp(21.5565981 - eg0 / (2.0 * vtm0))   // level=8 ni=1.450000e+010(in bsim5.valine 1802)
+                                        <
+                                             tnom = TNOM + 273.15   // level=9 tnom=3.001500e+002(in bsim5.valine 1336)
+                                             eg0  = 1.16 - 7.02e-4 * tnom * tnom / (tnom + 1108.0)   // level=9 eg0=1.115088e+000(in bsim5.valine 1801)
+                                             <
+                                                  tnom = TNOM + 273.15   // level=10 tnom=3.001500e+002(in bsim5.valine 1336)
+                                             />
+                                             vtm0 = `KboQ * tnom   // level=9 vtm0=2.586419e-002(in bsim5.valine 1800)
+                                             <
+                                                  tnom = TNOM + 273.15   // level=10 tnom=3.001500e+002(in bsim5.valine 1336)
+                                             />
+                                        />
+                                        vtm0 = `KboQ * tnom   // level=8 vtm0=2.586419e-002(in bsim5.valine 1800)
+                                        <
+                                             tnom = TNOM + 273.15   // level=9 tnom=3.001500e+002(in bsim5.valine 1336)
+                                        />
+                                        phin       = PHIN   // level=8 phin=0.000000e+000(in bsim5.valine 1132)
+                                   />
+                              />
+                         />
+                         t2 = sqrt(phi * (phi - vbm)) - phi   // level=5 t2=-1.#IND00e+000(in bsim5.valine 2257)
+                         <
+                              phi     = vtm0 * ln(ndep / ni) + phin + 0.4   // level=6 phi=8.072712e-001(in bsim5.valine 2203)
+                              <
+                                   ndep   = 1.0e17   // level=7 ndep=1.000000e+017(in bsim5.valine 2184)
+                                   ni   = 1.45e10 * (tnom / 300.15) * sqrt(tnom / 300.15) * exp(21.5565981 - eg0 / (2.0 * vtm0))   // level=7 ni=1.450000e+010(in bsim5.valine 1802)
+                                   <
+                                        tnom = TNOM + 273.15   // level=8 tnom=3.001500e+002(in bsim5.valine 1336)
+                                        eg0  = 1.16 - 7.02e-4 * tnom * tnom / (tnom + 1108.0)   // level=8 eg0=1.115088e+000(in bsim5.valine 1801)
+                                        <
+                                             tnom = TNOM + 273.15   // level=9 tnom=3.001500e+002(in bsim5.valine 1336)
+                                        />
+                                        vtm0 = `KboQ * tnom   // level=8 vtm0=2.586419e-002(in bsim5.valine 1800)
+                                        <
+                                             tnom = TNOM + 273.15   // level=9 tnom=3.001500e+002(in bsim5.valine 1336)
+                                        />
+                                   />
+                                   vtm0 = `KboQ * tnom   // level=7 vtm0=2.586419e-002(in bsim5.valine 1800)
+                                   <
+                                        tnom = TNOM + 273.15   // level=8 tnom=3.001500e+002(in bsim5.valine 1336)
+                                   />
+                                   phin       = PHIN   // level=7 phin=0.000000e+000(in bsim5.valine 1132)
+                              />
+                              vbm = -vbm   // level=6 vbm=3.000000e+000(in bsim5.valine 2253)
+                              <
+                                   vbm        = VBM   // level=7 vbm=-3.000000e+000(in bsim5.valine 1189)
+                              />
+                         />
+                         vbm = -vbm   // level=5 vbm=3.000000e+000(in bsim5.valine 2253)
+                         <
+                              vbm        = VBM   // level=6 vbm=-3.000000e+000(in bsim5.valine 1189)
+                         />
+                    />
+               />
+               toxe = 3.0e-9   // level=3 toxe=3.000000e-009(in bsim5.valine 1304)
+               toxm = toxe   // level=3 toxm=3.000000e-009(in bsim5.valine 1314)
+               <
+                    toxe = 3.0e-9   // level=4 toxe=3.000000e-009(in bsim5.valine 1304)
+               />
+          />
+          sqrtphis = sqrt(phis)   // level=2 sqrtphis=2.017595e-001(in bsim5.valine 2911)
+          <
+               phis = phi - vbseff   // level=3 phis=4.070692e-002(in bsim5.valine 2910)
+               <
+                    phi     = vtm0 * ln(ndep / ni) + phin + 0.4   // level=4 phi=8.072712e-001(in bsim5.valine 2203)
+                    <
+                         ndep   = 1.0e17   // level=5 ndep=1.000000e+017(in bsim5.valine 2184)
+                         ni   = 1.45e10 * (tnom / 300.15) * sqrt(tnom / 300.15) * exp(21.5565981 - eg0 / (2.0 * vtm0))   // level=5 ni=1.450000e+010(in bsim5.valine 1802)
+                         <
+                              tnom = TNOM + 273.15   // level=6 tnom=3.001500e+002(in bsim5.valine 1336)
+                              eg0  = 1.16 - 7.02e-4 * tnom * tnom / (tnom + 1108.0)   // level=6 eg0=1.115088e+000(in bsim5.valine 1801)
+                              <
+                                   tnom = TNOM + 273.15   // level=7 tnom=3.001500e+002(in bsim5.valine 1336)
+                              />
+                              vtm0 = `KboQ * tnom   // level=6 vtm0=2.586419e-002(in bsim5.valine 1800)
+                              <
+                                   tnom = TNOM + 273.15   // level=7 tnom=3.001500e+002(in bsim5.valine 1336)
+                              />
+                         />
+                         vtm0 = `KboQ * tnom   // level=5 vtm0=2.586419e-002(in bsim5.valine 1800)
+                         <
+                              tnom = TNOM + 273.15   // level=6 tnom=3.001500e+002(in bsim5.valine 1336)
+                         />
+                         phin       = PHIN   // level=5 phin=0.000000e+000(in bsim5.valine 1132)
+                    />
+                    vbseff = t9 - 0.5 * (t0 + t1)   // level=4 vbseff=7.665643e-001(in bsim5.valine 2907)
+                    <
+                         t9 = 0.95 * phi   // level=5 t9=7.669077e-001(in bsim5.valine 2904)
+                         <
+                              phi     = vtm0 * ln(ndep / ni) + phin + 0.4   // level=6 phi=8.072712e-001(in bsim5.valine 2203)
+                              <
+                                   ndep   = 1.0e17   // level=7 ndep=1.000000e+017(in bsim5.valine 2184)
+                                   ni   = 1.45e10 * (tnom / 300.15) * sqrt(tnom / 300.15) * exp(21.5565981 - eg0 / (2.0 * vtm0))   // level=7 ni=1.450000e+010(in bsim5.valine 1802)
+                                   <
+                                        tnom = TNOM + 273.15   // level=8 tnom=3.001500e+002(in bsim5.valine 1336)
+                                        eg0  = 1.16 - 7.02e-4 * tnom * tnom / (tnom + 1108.0)   // level=8 eg0=1.115088e+000(in bsim5.valine 1801)
+                                        <
+                                             tnom = TNOM + 273.15   // level=9 tnom=3.001500e+002(in bsim5.valine 1336)
+                                        />
+                                        vtm0 = `KboQ * tnom   // level=8 vtm0=2.586419e-002(in bsim5.valine 1800)
+                                        <
+                                             tnom = TNOM + 273.15   // level=9 tnom=3.001500e+002(in bsim5.valine 1336)
+                                        />
+                                   />
+                                   vtm0 = `KboQ * tnom   // level=7 vtm0=2.586419e-002(in bsim5.valine 1800)
+                                   <
+                                        tnom = TNOM + 273.15   // level=8 tnom=3.001500e+002(in bsim5.valine 1336)
+                                   />
+                                   phin       = PHIN   // level=7 phin=0.000000e+000(in bsim5.valine 1132)
+                              />
+                         />
+                         t0 = t9 - vbseff - 0.001   // level=5 t0=-2.233235e+000(in bsim5.valine 2905)
+                         <
+                              t9 = 0.95 * phi   // level=6 t9=7.669077e-001(in bsim5.valine 2904)
+                              <
+                                   phi     = vtm0 * ln(ndep / ni) + phin + 0.4   // level=7 phi=8.072712e-001(in bsim5.valine 2203)
+                                   <
+                                        ndep   = 1.0e17   // level=8 ndep=1.000000e+017(in bsim5.valine 2184)
+                                        ni   = 1.45e10 * (tnom / 300.15) * sqrt(tnom / 300.15) * exp(21.5565981 - eg0 / (2.0 * vtm0))   // level=8 ni=1.450000e+010(in bsim5.valine 1802)
+                                        <
+                                             tnom = TNOM + 273.15   // level=9 tnom=3.001500e+002(in bsim5.valine 1336)
+                                             eg0  = 1.16 - 7.02e-4 * tnom * tnom / (tnom + 1108.0)   // level=9 eg0=1.115088e+000(in bsim5.valine 1801)
+                                             <
+                                                  tnom = TNOM + 273.15   // level=10 tnom=3.001500e+002(in bsim5.valine 1336)
+                                             />
+                                             vtm0 = `KboQ * tnom   // level=9 vtm0=2.586419e-002(in bsim5.valine 1800)
+                                             <
+                                                  tnom = TNOM + 273.15   // level=10 tnom=3.001500e+002(in bsim5.valine 1336)
+                                             />
+                                        />
+                                        vtm0 = `KboQ * tnom   // level=8 vtm0=2.586419e-002(in bsim5.valine 1800)
+                                        <
+                                             tnom = TNOM + 273.15   // level=9 tnom=3.001500e+002(in bsim5.valine 1336)
+                                        />
+                                        phin       = PHIN   // level=8 phin=0.000000e+000(in bsim5.valine 1132)
+                                   />
+                              />
+                              vbseff = vbsc * (1.0 + t2)   // level=6 vbseff=2.999143e+000(in bsim5.valine 2900)
+                              <
+                                   vbsc = vbm   // level=7 vbsc=3.000000e+000(in bsim5.valine 2455)
+                                   <
+                                        vbm = -vbm   // level=8 vbm=3.000000e+000(in bsim5.valine 2253)
+                                        <
+                                             vbm        = VBM   // level=9 vbm=-3.000000e+000(in bsim5.valine 1189)
+                                        />
+                                   />
+                                   t2 = -0.002 / (t1 - t0)   // level=7 t2=-2.857026e-004(in bsim5.valine 2899)
+                                   <
+                                        t1 = sqrt(t0 * t0 - 0.004 * vbsc)   // level=8 t1=3.499286e+000(in bsim5.valine 2893)
+                                        <
+                                             t0 = Vbs - vbsc - 0.001   // level=9 t0=-3.501000e+000(in bsim5.valine 2892)
+                                             <
+                                                  Vbs  = vbd   // level=10 Vbs=-5.000000e-001(in bsim5.valine 2888)
+                                                  <
+                                                       vbd   = vbs - vds   // level=11 vbd=-5.000000e-001(in bsim5.valine 2710)
+                                                       <
+                                                            vbs   = type * V(bulkp, sourcep)   // level=12 vbs=0.000000e+000(in bsim5.valine 2701)
+                                                            <
+                                                                 type       = TYPE   // level=13 type=1.000000e+000(in bsim5.valine 1180)
+                                                            />
+                                                            vds   = type * V(drainp, sourcep)   // level=12 vds=5.000000e-001(in bsim5.valine 2699)
+                                                            <
+                                                                 type       = TYPE   // level=13 type=1.000000e+000(in bsim5.valine 1180)
+                                                            />
+                                                       />
+                                                  />
+                                                  vbsc = vbm   // level=10 vbsc=3.000000e+000(in bsim5.valine 2455)
+                                                  <
+                                                       vbm = -vbm   // level=11 vbm=3.000000e+000(in bsim5.valine 2253)
+                                                       <
+                                                            vbm        = VBM   // level=12 vbm=-3.000000e+000(in bsim5.valine 1189)
+                                                       />
+                                                  />
+                                             />
+                                             vbsc = vbm   // level=9 vbsc=3.000000e+000(in bsim5.valine 2455)
+                                             <
+                                                  vbm = -vbm   // level=10 vbm=3.000000e+000(in bsim5.valine 2253)
+                                                  <
+                                                       vbm        = VBM   // level=11 vbm=-3.000000e+000(in bsim5.valine 1189)
+                                                  />
+                                             />
+                                        />
+                                        t0 = Vbs - vbsc - 0.001   // level=8 t0=-3.501000e+000(in bsim5.valine 2892)
+                                        <
+                                             Vbs  = vbd   // level=9 Vbs=-5.000000e-001(in bsim5.valine 2888)
+                                             <
+                                                  vbd   = vbs - vds   // level=10 vbd=-5.000000e-001(in bsim5.valine 2710)
+                                                  <
+                                                       vbs   = type * V(bulkp, sourcep)   // level=11 vbs=0.000000e+000(in bsim5.valine 2701)
+                                                       <
+                                                            type       = TYPE   // level=12 type=1.000000e+000(in bsim5.valine 1180)
+                                                       />
+                                                       vds   = type * V(drainp, sourcep)   // level=11 vds=5.000000e-001(in bsim5.valine 2699)
+                                                       <
+                                                            type       = TYPE   // level=12 type=1.000000e+000(in bsim5.valine 1180)
+                                                       />
+                                                  />
+                                             />
+                                             vbsc = vbm   // level=9 vbsc=3.000000e+000(in bsim5.valine 2455)
+                                             <
+                                                  vbm = -vbm   // level=10 vbm=3.000000e+000(in bsim5.valine 2253)
+                                                  <
+                                                       vbm        = VBM   // level=11 vbm=-3.000000e+000(in bsim5.valine 1189)
+                                                  />
+                                             />
+                                        />
+                                   />
+                              />
+                         />
+                         t1 = sqrt(t0 * t0 + 0.004 * t9)   // level=5 t1=2.233922e+000(in bsim5.valine 2906)
+                         <
+                              t0 = t9 - vbseff - 0.001   // level=6 t0=-2.233235e+000(in bsim5.valine 2905)
+                              <
+                                   t9 = 0.95 * phi   // level=7 t9=7.669077e-001(in bsim5.valine 2904)
+                                   <
+                                        phi     = vtm0 * ln(ndep / ni) + phin + 0.4   // level=8 phi=8.072712e-001(in bsim5.valine 2203)
+                                        <
+                                             ndep   = 1.0e17   // level=9 ndep=1.000000e+017(in bsim5.valine 2184)
+                                             ni   = 1.45e10 * (tnom / 300.15) * sqrt(tnom / 300.15) * exp(21.5565981 - eg0 / (2.0 * vtm0))   // level=9 ni=1.450000e+010(in bsim5.valine 1802)
+                                             <
+                                                  tnom = TNOM + 273.15   // level=10 tnom=3.001500e+002(in bsim5.valine 1336)
+                                                  eg0  = 1.16 - 7.02e-4 * tnom * tnom / (tnom + 1108.0)   // level=10 eg0=1.115088e+000(in bsim5.valine 1801)
+                                                  <
+                                                       tnom = TNOM + 273.15   // level=11 tnom=3.001500e+002(in bsim5.valine 1336)
+                                                  />
+                                                  vtm0 = `KboQ * tnom   // level=10 vtm0=2.586419e-002(in bsim5.valine 1800)
+                                                  <
+                                                       tnom = TNOM + 273.15   // level=11 tnom=3.001500e+002(in bsim5.valine 1336)
+                                                  />
+                                             />
+                                             vtm0 = `KboQ * tnom   // level=9 vtm0=2.586419e-002(in bsim5.valine 1800)
+                                             <
+                                                  tnom = TNOM + 273.15   // level=10 tnom=3.001500e+002(in bsim5.valine 1336)
+                                             />
+                                             phin       = PHIN   // level=9 phin=0.000000e+000(in bsim5.valine 1132)
+                                        />
+                                   />
+                                   vbseff = vbsc * (1.0 + t2)   // level=7 vbseff=2.999143e+000(in bsim5.valine 2900)
+                                   <
+                                        vbsc = vbm   // level=8 vbsc=3.000000e+000(in bsim5.valine 2455)
+                                        <
+                                             vbm = -vbm   // level=9 vbm=3.000000e+000(in bsim5.valine 2253)
+                                             <
+                                                  vbm        = VBM   // level=10 vbm=-3.000000e+000(in bsim5.valine 1189)
+                                             />
+                                        />
+                                        t2 = -0.002 / (t1 - t0)   // level=8 t2=-2.857026e-004(in bsim5.valine 2899)
+                                        <
+                                             t1 = sqrt(t0 * t0 - 0.004 * vbsc)   // level=9 t1=3.499286e+000(in bsim5.valine 2893)
+                                             <
+                                                  t0 = Vbs - vbsc - 0.001   // level=10 t0=-3.501000e+000(in bsim5.valine 2892)
+                                                  <
+                                                       Vbs  = vbd   // level=11 Vbs=-5.000000e-001(in bsim5.valine 2888)
+                                                       <
+                                                            vbd   = vbs - vds   // level=12 vbd=-5.000000e-001(in bsim5.valine 2710)
+                                                            <
+                                                                 vbs   = type * V(bulkp, sourcep)   // level=13 vbs=0.000000e+000(in bsim5.valine 2701)
+                                                                 <
+                                                                      type       = TYPE   // level=14 type=1.000000e+000(in bsim5.valine 1180)
+                                                                 />
+                                                                 vds   = type * V(drainp, sourcep)   // level=13 vds=5.000000e-001(in bsim5.valine 2699)
+                                                                 <
+                                                                      type       = TYPE   // level=14 type=1.000000e+000(in bsim5.valine 1180)
+                                                                 />
+                                                            />
+                                                       />
+                                                       vbsc = vbm   // level=11 vbsc=3.000000e+000(in bsim5.valine 2455)
+                                                       <
+                                                            vbm = -vbm   // level=12 vbm=3.000000e+000(in bsim5.valine 2253)
+                                                            <
+                                                                 vbm        = VBM   // level=13 vbm=-3.000000e+000(in bsim5.valine 1189)
+                                                            />
+                                                       />
+                                                  />
+                                                  vbsc = vbm   // level=10 vbsc=3.000000e+000(in bsim5.valine 2455)
+                                                  <
+                                                       vbm = -vbm   // level=11 vbm=3.000000e+000(in bsim5.valine 2253)
+                                                       <
+                                                            vbm        = VBM   // level=12 vbm=-3.000000e+000(in bsim5.valine 1189)
+                                                       />
+                                                  />
+                                             />
+                                             t0 = Vbs - vbsc - 0.001   // level=9 t0=-3.501000e+000(in bsim5.valine 2892)
+                                             <
+                                                  Vbs  = vbd   // level=10 Vbs=-5.000000e-001(in bsim5.valine 2888)
+                                                  <
+                                                       vbd   = vbs - vds   // level=11 vbd=-5.000000e-001(in bsim5.valine 2710)
+                                                       <
+                                                            vbs   = type * V(bulkp, sourcep)   // level=12 vbs=0.000000e+000(in bsim5.valine 2701)
+                                                            <
+                                                                 type       = TYPE   // level=13 type=1.000000e+000(in bsim5.valine 1180)
+                                                            />
+                                                            vds   = type * V(drainp, sourcep)   // level=12 vds=5.000000e-001(in bsim5.valine 2699)
+                                                            <
+                                                                 type       = TYPE   // level=13 type=1.000000e+000(in bsim5.valine 1180)
+                                                            />
+                                                       />
+                                                  />
+                                                  vbsc = vbm   // level=10 vbsc=3.000000e+000(in bsim5.valine 2455)
+                                                  <
+                                                       vbm = -vbm   // level=11 vbm=3.000000e+000(in bsim5.valine 2253)
+                                                       <
+                                                            vbm        = VBM   // level=12 vbm=-3.000000e+000(in bsim5.valine 1189)
+                                                       />
+                                                  />
+                                             />
+                                        />
+                                   />
+                              />
+                              t9 = 0.95 * phi   // level=6 t9=7.669077e-001(in bsim5.valine 2904)
+                              <
+                                   phi     = vtm0 * ln(ndep / ni) + phin + 0.4   // level=7 phi=8.072712e-001(in bsim5.valine 2203)
+                                   <
+                                        ndep   = 1.0e17   // level=8 ndep=1.000000e+017(in bsim5.valine 2184)
+                                        ni   = 1.45e10 * (tnom / 300.15) * sqrt(tnom / 300.15) * exp(21.5565981 - eg0 / (2.0 * vtm0))   // level=8 ni=1.450000e+010(in bsim5.valine 1802)
+                                        <
+                                             tnom = TNOM + 273.15   // level=9 tnom=3.001500e+002(in bsim5.valine 1336)
+                                             eg0  = 1.16 - 7.02e-4 * tnom * tnom / (tnom + 1108.0)   // level=9 eg0=1.115088e+000(in bsim5.valine 1801)
+                                             <
+                                                  tnom = TNOM + 273.15   // level=10 tnom=3.001500e+002(in bsim5.valine 1336)
+                                             />
+                                             vtm0 = `KboQ * tnom   // level=9 vtm0=2.586419e-002(in bsim5.valine 1800)
+                                             <
+                                                  tnom = TNOM + 273.15   // level=10 tnom=3.001500e+002(in bsim5.valine 1336)
+                                             />
+                                        />
+                                        vtm0 = `KboQ * tnom   // level=8 vtm0=2.586419e-002(in bsim5.valine 1800)
+                                        <
+                                             tnom = TNOM + 273.15   // level=9 tnom=3.001500e+002(in bsim5.valine 1336)
+                                        />
+                                        phin       = PHIN   // level=8 phin=0.000000e+000(in bsim5.valine 1132)
+                                   />
+                              />
+                         />
+                    />
+               />
+          />
+     />
+
+
+
+
+
+
+	I(d,s) = Id
+	<
+		Id = Ispec * (iff - ir)
+		<
+			Ispec = 2 * n * beta * VT * VT
+			<
+				n = 1.0 + GAMMA / (2.0*sqrt(PHI + VP + 4.0*VT))
+				<	
+					GAMMA=0.7
+					PHI=0.5
+					VP = VGprime - PHI - GAMMA * (sqrt(VGprime+(GAMMA/2.0)*(GAMMA/2.0))-(GAMMA/2.0))
+					<
+						VGprime = VG - VTO + PHI + GAMMA * sqrt(PHI)
+						<
+							VG = V(g)
+							VTO=0.5
+							PHI=0.5
+							GAMMA=0.7
+						/>
+						PHI=0.5
+						GAMMA=0.7
+					/>
+					VT = `P_K*Tdev /`P_Q
+					<
+						`P_K=`P_K
+						Tdev=
+						<
+							Tdev=Tamb+dt
+							<
+								Tamb=$temperature
+								dt=0.0
+							/>
+							`TMIN=-100.0
+							`TMAX=326.85
+							if(Tdev<`TMIN+273.15)
+							<
+								Tdev=`TMIN+273.15
+								<
+									`TMIN=-100.0
+								/>
+							/>							
+						    elseif(Tdev>`TMAX+273.15)
+							<
+								Tdev=`TMAX+273.15
+								<
+									`TMAX=326.85
+								/>
+							/>
+						/>
+						`P_Q=`P_Q
+					/>
+				/>
+				beta = KP * (W/L) * (1.0/(1.0 + THETA * VP))
+				<
+					KP=20E-6
+					W=10E-6
+					L=10E-6
+					THETA=50.0E-3
+					VP = VGprime - PHI - GAMMA * (sqrt(VGprime+(GAMMA/2.0)*(GAMMA/2.0))-(GAMMA/2.0))
+					<
+						VGprime = VG - VTO + PHI + GAMMA * sqrt(PHI)
+						<
+							VG = V(g)
+							VTO=0.5
+							PHI=0.5
+							GAMMA=0.7
+						/>
+						PHI=0.5
+						GAMMA=0.7
+					/>
+				/>					
+				VT = `P_K*Tdev /`P_Q
+				<
+					`P_K=`P_K
+					Tdev=
+					<
+						Tdev=Tamb+dt
+						<
+							Tamb=$temperature
+							dt=0.0
+						/>
+						`TMIN=-100.0
+						`TMAX=326.85
+						if(Tdev<`TMIN+273.15)
+						<
+							Tdev=`TMIN+273.15
+							<
+								`TMIN=-100.0
+							/>
+						/>
+						elseif(Tdev>`TMAX+273.15)
+						<
+							Tdev=`TMAX+273.15
+							<
+								`TMAX=326.85
+							/>
+						/>
+					/>
+					`P_Q=`P_Q
+				/>
+			/>
+			iff = (ln(1.0+exp( x /2.0)))*(ln(1.0+exp( x /2.0)))
+			<
+				x=(VP-VS)/VT
+				<
+					VP = VGprime - PHI - GAMMA * (sqrt(VGprime+(GAMMA/2.0)*(GAMMA/2.0))-(GAMMA/2.0))
+					<
+						VGprime = VG - VTO + PHI + GAMMA * sqrt(PHI)
+						<
+							VG = V(g)
+							VTO=0.5
+							PHI=0.5
+							GAMMA=0.7
+						/>
+						PHI=0.5
+						GAMMA=0.7
+					/>
+					VS=V(s)
+					VT = `P_K*Tdev /`P_Q
+					<
+						`P_K=`P_K
+						Tdev=
+						<
+							Tdev=Tamb+dt
+							<
+								Tamb=$temperature
+								dt=0.0
+							/>
+							`TMIN=-100.0
+							`TMAX=326.85
+							if(Tdev<`TMIN+273.15)
+							<
+								Tdev=`TMIN+273.15
+								<
+									`TMIN=-100.0
+								/>
+							/>
+						    elseif(Tdev>`TMAX+273.15)
+							<
+								Tdev=`TMAX+273.15
+								<
+									`TMAX=326.85
+								/>
+							/>
+						/>
+						`P_Q=`P_Q
+					/>
+				/>
+			/>
+			ir  = (ln(1.0+exp( x /2.0)))*(ln(1.0+exp( x /2.0)))
+			<
+				x=(VP-VD)/VT
+				<
+					VP = VGprime - PHI - GAMMA * (sqrt(VGprime+(GAMMA/2.0)*(GAMMA/2.0))-(GAMMA/2.0))
+					<
+						VGprime = VG - VTO + PHI + GAMMA * sqrt(PHI)
+						<
+							VG = V(g)
+							VTO=0.5
+							PHI=0.5
+							GAMMA=0.7
+						/>
+						PHI=0.5
+						GAMMA=0.7
+					/>
+					VD=V(d)
+					VT = `P_K*Tdev /`P_Q
+					<
+						`P_K=`P_K
+						Tdev=
+						<
+							Tdev=Tamb+dt
+							<
+								Tamb=$temperature
+								dt=0.0
+							/>
+							`TMIN=-100.0
+							`TMAX=326.85
+							if(Tdev<`TMIN+273.15)
+							<
+								Tdev=`TMIN+273.15
+								<
+									`TMIN=-100.0
+								/>
+							/>
+						    elseif(Tdev>`TMAX+273.15)
+							<
+								Tdev=`TMAX+273.15
+								<
+									`TMAX=326.85
+								/>
+							/>
+						/>
+						`P_Q=`P_Q
+					/>
+				/>
+			/>
+		/>
+	/>
