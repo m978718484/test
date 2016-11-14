@@ -1,4 +1,7 @@
 https://addons.mozilla.org/firefox/downloads/latest/5817/addon-5817-latest.xpi?src=dp-btn-primary
 
---²å¼þ
+--Â²Ã¥Â¼Ã¾
 https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/
+
+
+http://kresnik.wang///works/tech/2015/06/07/%E5%9C%A8github-pages%E7%BD%91%E7%AB%99%E4%B8%8B%E7%94%A8jekyll%E5%88%B6%E4%BD%9C%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B.html
