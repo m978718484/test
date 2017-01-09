@@ -35,15 +35,12 @@
 	$(document).ready(function() {
 		    $("#numbersOnly").on('input',function(e){
 		      this.value = this.value.replace(/[^0-9]/g,'');
-		      if (this.value>100) {
+		      if (this.value>100||this.value==0) {
 		      	this.value="";
 		      }
-		    });
-		    $("#numbersOnly").change('input',function(e){
-  				if (this.value!="") {
-		      	$("#result").append('20');
-		      }
-		    });		    		    
+	      	$("#result").text(this.value);
+
+		    });    		    
 		});
 	</script>
 </head>
@@ -245,8 +242,14 @@
 			                </div>
 			            </div>
 			        </li> 
-			        <li id="result"> 
-			         12.50%+(0.5*<input type="textbox" name = "numbersOnly" id = "numbersOnly" class="numbersOnly" style="width:1.5em;border:none;border-bottom:solid;">)%=
+			        <li> 
+			        <div class="ui-grid-a">
+<div class="ui-block-a" style="width: 70%;">
+12.50% + ( 0.5 * <input type="textbox" name = "numbersOnly" id = "numbersOnly" class="numbersOnly" style="width:1.5em;border:none;border-bottom:solid;" > )% =
+</div>
+<div class="ui-block-b" style="width:30%;"><span id="result"></span></div>
+</div>
+			         
 			        </li> 
 			        <li>
 			            <a data-role="button" style="text-align:center;" data-icon="check" data-iconpos="right">保 存</a>
