@@ -37,13 +37,6 @@
 			$("#myPopupDialog").popup("open" , {transition: 'pop'});
 		});
 
-		function myFunction() {
-			debugger;
-			$('body,html').animate({
-			    scrollTop: theOffset.top - 50
-			});
-		};
-
 		var number = $("#number").on('input',function(e){
 		      this.value = this.value.replace(/[^0-9]/g,'');
 		      if (this.value>100||this.value==0) {
@@ -52,6 +45,14 @@
 		    $("#numbersOnly").val(this.value);
 	      	$("#result").text(this.value);
 		    });    		    
+		});
+
+		$('#number').bind('click',function(){
+			debugger;
+		    theOffset = $(this).offset();
+		    $('body,html').animate({
+		        scrollTop: theOffset.top - 50
+		    });
 		});
 	</script>
 </head>
@@ -304,7 +305,7 @@
         <h1>降价幅度</h1>
       </div>
       <div data-role="main" class="ui-content">
-	  	<input type="number" id="number" name="input_number" onfocus="myFunction();">
+	  	<input type="number" id="number" name="input_number">
       </div>
       <div data-role="footer">
       	<center>
@@ -312,8 +313,7 @@
         </center>
       </div>
     </div>
-  </div>
-<div data-role="footer" data-position="fixed" id="footer" data-theme="b">
+    <div data-role="footer" data-position="fixed" id="footer" data-theme="b">
         <div data-role="navbar">
           <ul>
             <li><a href="javascript:location.href='search.php'">公告动态</a></li>
@@ -322,8 +322,6 @@
           </ul>
         </div>
 </div>
-</div>
-
-
+ </div>
 </body>
 </html>
