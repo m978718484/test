@@ -31,6 +31,13 @@
 	        overflow:hidden;
 	    }
 	</style>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		    $("#numbersOnly").on('input',function(e){
+		      this.value = this.value.replace(/[^0-9]/g,'');
+		    });
+		});
+	</script>
 </head>
  <body>
 <div data-role="page" id="page-title">  
@@ -228,14 +235,14 @@
 			                <div class="ui-block-a">
 			                    <span>降价幅度:</span>
 			                </div>
-			                <div class="ui-block-b">				  
-			                  <input type="number" name"abc">
-			                </div>
 			            </div>
 			        </li> 
 			        <li> 
-			            <a data-role="button">保 存</a>
+			         12.50% + ( 0.5 *<input type="textbox" name"abc" id="numbersOnly" class="numbersOnly" style="width:3em;border:none;border-bottom:solid red;"> )% =
 			        </li> 
+			        <li>
+			            <a data-role="button" style="text-align:center;" data-icon="check" data-iconpos="right">保 存</a>
+			        </li>
 			    </ul> 
 		    </div>
 		    <div data-role="collapsible" class="info_main">
@@ -270,8 +277,6 @@
 		        </div>
 		    </div>
 	    </div>
-	<a data-role="button">投	标</a>
-
 <div data-role="footer" data-position="fixed" id="footer" data-theme="b">
         <div data-role="navbar">
           <ul>
