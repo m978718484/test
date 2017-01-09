@@ -35,7 +35,15 @@
 	$(document).ready(function() {
 		    $("#numbersOnly").on('input',function(e){
 		      this.value = this.value.replace(/[^0-9]/g,'');
+		      if (this.value>100) {
+		      	this.value="";
+		      }
 		    });
+		    $("#numbersOnly").change('input',function(e){
+  				if (this.value!="") {
+		      	$("#result").append('20');
+		      }
+		    });		    		    
 		});
 	</script>
 </head>
@@ -233,12 +241,12 @@
 			        <li> 
 			            <div class="ui-grid-a"> 
 			                <div class="ui-block-a">
-			                    <span>降价幅度:</span>
+			                    <span>降价幅度</span>
 			                </div>
 			            </div>
 			        </li> 
-			        <li> 
-			         12.50% + ( 0.5 *<input type="textbox" name"abc" id="numbersOnly" class="numbersOnly" style="width:3em;border:none;border-bottom:solid red;"> )% =
+			        <li id="result"> 
+			         12.50%+(0.5*<input type="textbox" name = "numbersOnly" id = "numbersOnly" class="numbersOnly" style="width:1.5em;border:none;border-bottom:solid;">)%=
 			        </li> 
 			        <li>
 			            <a data-role="button" style="text-align:center;" data-icon="check" data-iconpos="right">保 存</a>
