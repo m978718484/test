@@ -35,6 +35,15 @@
 	$(document).ready(function() {
 		var text_box_click = $("#numbersOnly").click(function(){
 			$("#myPopupDialog").popup("open" , {transition: 'pop'});
+
+			var loaclHeight = $("section").height();//获取可视宽度
+			$("input,textarea").focus(function() {
+			var keyboardHeight = localHeight - $("section").height();//获取键盘的高度
+			var keyboardY = localHeight - keyboardHeight;
+			var addBottom = (parseInt($(this).position().top) + parseInt($(this).height()));//文本域的底部
+			var offset = addBottom - keyboardY;//计算上滑的距离
+			$("section").scrollTop(offset);
+			});
 		});
 		var number = $("#number").on('input',function(e){
 		      this.value = this.value.replace(/[^0-9]/g,'');
