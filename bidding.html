@@ -33,13 +33,16 @@
 	</style>
 	<script type="text/javascript">
 	$(document).ready(function() {
-		    $("#numbersOnly").on('input',function(e){
+		var text_box_click = $("#numbersOnly").click(function(){
+			$("#login").popup("open" , {transition: 'pop'});
+		});
+		var number = $("#number").on('input',function(e){
+		      $("#numbersOnly").val(this.value);
 		      this.value = this.value.replace(/[^0-9]/g,'');
 		      if (this.value>100||this.value==0) {
 		      	this.value="";
 		      }
 	      	$("#result").text(this.value);
-
 		    });    		    
 		});
 	</script>
@@ -244,15 +247,16 @@
 			        </li> 
 			        <li> 
 			        <div class="ui-grid-a">
-<div class="ui-block-a" style="width: 70%;text-align:left;">
-12.50% + ( 0.5 * <input type="textbox" name = "numbersOnly" id = "numbersOnly" class="numbersOnly" style="width:1.6em;border:none;border-bottom:solid;border-bottom-width: thin;" > )% =
+<div class="ui-block-a" style="width: 75%;text-align:left;">
+12.50% + ( 0.5 * <input href="#login" type="textbox" name = "numbersOnly" readonly="true" id = "numbersOnly" class="numbersOnly" style="width:3em;border:none;border-bottom:solid;border-bottom-width: thin;" > )% =
 </div>
-<div class="ui-block-b" style="width:30%;"><span id="result"></span></div>
+<div class="ui-block-b" style="width:25%;"><span id="result"></span></div>
 </div>
 			         
 			        </li> 
 			        <li>
 			            <a data-role="button" style="text-align:center;" data-icon="check" data-iconpos="right">保 存</a>
+			            <a href="#login" data-rel="popup" data-position-to="window" data-transition="fade" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">打开对话框弹窗</a>
 			        </li>
 			    </ul> 
 		    </div>
@@ -288,6 +292,11 @@
 		        </div>
 		    </div>
 	    </div>
+
+	  <div data-role="popup" id="login" data-theme="a"> 
+	  <input type="number" id="number" name="input_number">
+	  <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-left" data-rel="back">确定</a>
+	  </div>
 <div data-role="footer" data-position="fixed" id="footer" data-theme="b">
         <div data-role="navbar">
           <ul>
