@@ -36,6 +36,14 @@
 		var text_box_click = $("#numbersOnly").click(function(){
 			$("#myPopupDialog").popup("open" , {transition: 'pop'});
 		});
+
+		function myFunction() {
+			debugger;
+			$('body,html').animate({
+			    scrollTop: theOffset.top - 50
+			});
+		};
+
 		var number = $("#number").on('input',function(e){
 		      this.value = this.value.replace(/[^0-9]/g,'');
 		      if (this.value>100||this.value==0) {
@@ -263,7 +271,7 @@
 			    <h4>竞标情况</h4>
 			    <div data-role="navbar">
 		          <ul>
-		            <li style="width:35px">排名</li>
+		            <li style="width:35px;">排名</li>
 		            <li style="width:70px;">降价幅度</li>
 		            <li style="width:150px;">竞价时间</li>
 		          </ul>
@@ -277,14 +285,14 @@
 		        </div>
 		       <div data-role="navbar">
 		          <ul>
-		            <li style="width:35px">2</li>
+		            <li style="width:35px;">2</li>
 		            <li style="width:70px;">10.3%</li>
 		            <li style="width:150px;">2015-10-20 10:30:25</li>
 		          </ul>
 		        </div>
 		       <div data-role="navbar">
 		          <ul>
-		            <li style="width:35px">2</li>
+		            <li style="width:35px;">2</li>
 		            <li style="width:70px;">10%</li>
 		            <li style="width:150px;">2015-10-20 10:30:25</li>
 		          </ul>
@@ -296,7 +304,7 @@
         <h1>降价幅度</h1>
       </div>
       <div data-role="main" class="ui-content">
-	  	<input type="number" id="number" name="input_number">
+	  	<input type="number" id="number" name="input_number" onfocus="myFunction();">
       </div>
       <div data-role="footer">
       	<center>
