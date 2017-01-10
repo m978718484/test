@@ -36,6 +36,7 @@
 		var text_box_click = $("#numbersOnly").click(function(){
 			$("#myPopupDialog").popup("open" , {transition: 'pop'});
 			$("#number")[0].focus();
+			$("html,body").animate({scrollTop:$("#number").offset().top},1000);
 		});
 
 		var number = $("#number").on('input',function(e){
@@ -46,10 +47,6 @@
 		    $("#numbersOnly").val(this.value);
 	      	$("#result").text(this.value);
 		    });    		    
-		});
-
-		$('#number').bind('click',function(){
-			$("html,body").animate({scrollTop:$("#number").offset().top},1000);
 		});
 	</script>
 </head>
