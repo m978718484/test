@@ -35,6 +35,7 @@
 	$(document).ready(function() {
 		var text_box_click = $("#numbersOnly").click(function(){
 			$("#myPopupDialog").popup("open" , {transition: 'pop'});
+			$("#number")[0].focus();
 		});
 
 		var number = $("#number").on('input',function(e){
@@ -48,11 +49,7 @@
 		});
 
 		$('#number').bind('click',function(){
-			debugger;
-		    theOffset = $(this).offset();
-		    $('body,html').animate({
-		        scrollTop: theOffset.top - 50
-		    });
+			$("html,body").animate({scrollTop:$("#number").offset().top},1000);
 		});
 	</script>
 </head>
