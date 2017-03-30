@@ -1,1 +1,2 @@
 http://www.stickpeople.com/projects/python/win-psycopg/
+test
