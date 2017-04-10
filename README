@@ -686,3 +686,15 @@
 			/>
 		/>
 	/>
+
+
+
+
+
+
+
+
+
+
+
+https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxec89b20daecbee29&redirect_uri=http%3A%2F%2Fwww.srmmx.com%2FSrsPay%2FmobilePay%2Fentrance%3Fattach%3D123%26nonceStr%3D123adfasdf%26notifyUrl%3Dhttps%253A%252F%252Fwww.baidu.com%26orderNo%3D0001%26partnerId%3Djushangwangservice%26productName%3Dtt%26toUrl%3Dhttps%253A%252F%252Fwww.baidu.com%26totalFee%3D100%26sign%3D5648AA719C9A9E3615FECAE83CBFFB0F&response_type=code&scope=snsapi_base&state=000#wechat_redirect
